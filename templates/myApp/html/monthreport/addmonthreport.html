@@ -1,0 +1,44 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title>报名情况</title>
+<link href="/static/myApp/css/main.css" rel="stylesheet" type="text/css">
+    <link href="/static/myApp/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="/static/myApp/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<style>
+.p_line {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px solid #CCCCCC;
+}
+</style>
+
+    <form action="addmonthreportdata" method="post"><p class="p_line text_ient">
+       <p><a class="find_a">○培训单位：</a><input type="text" value='{{ company }}' class="form_input text_ient" placeholder="输入内容" name="company"/>
+         <p><a class="find_a">○联系人：</a><input type="text" value='{{ contactname }}' class="form_input text_ient" placeholder="输入内容" name="contactname"/>
+        <p><a class="find_a">○培训开始时间：</a><input type="date" value='{{ trainstarttime }}' class="form_input text_ient" placeholder="输入内容" name="trainstarttime"/>
+        <a class="find_a">培训结束时间：</a><input type="date" value='{{ trainendtime }}' class="form_input text_ient" placeholder="输入内容" name="trainendtime"/></p>
+        <p><a class="find_a">○培训项目：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="traintype" value="{{traintype}}" /></p>
+         <p><a class="find_a">○培训工种：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="worktype" value="{{worktype}}" /></p>
+   <p> <a class="find_a">○培训性质：</a>
+    <select class="form_select" style="padding-left: 1%;" name="trainproperty" value="trainproperty" >
+        <option value="初训">初训</option>
+        <option value="复训">复训</option>
+    </select></p>
+    <p><a class="find_a">○培训地点：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="trainplace" value="{{ trainplace }}" /></p>
+    <p><a class="find_a">○培训人数：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="trainnumber" value="{{ trainnumber }}" /></p>
+        <p><a class="find_a">○理论考试时间：</a><input type="date" value='{{ theorytime }}' class="form_input text_ient" placeholder="输入内容" name="theorytime"/></p>
+        <p><a class="find_a">○实践考试时间：</a><input type="date" value='{{ practisetime }}' class="form_input text_ient" placeholder="输入内容" name="practisetime"/></p>
+        <input type="hidden" value='{{ id }}'  name="id"/>
+    <p align="center"><input type="submit" value="○提交修改○" class="but_find" id="datasubmit"/></p>
+    </form>
+<script src="/static/myApp/js/jquery.js"></script>
+<script src="/static/myApp/js/date/js/laydate.js"></script>
+<script src="/static/myApp/bstable/js/bootstrap.min.js"></script>
+<script src="/static/myApp/bstable/js/bootstrap-table.js"></script>
+<script src="/static/myApp/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+</body>
+</html>

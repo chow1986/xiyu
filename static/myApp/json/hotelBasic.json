@@ -1,0 +1,14 @@
+
+{"data":
+[ {"id":"1","name":"xxxx豪家酒店","star":"无","remaining":"12","all":"40","buildTime":"2016-12-15","phone": "15583459065","address":"xxxx萱花路50号（供电局公交站），近建工设计院","oper":"1"},
+  {"id":"2","name":"IU酒店（xxxx大南门店）","star":"无","remaining":"13","all":"30","buildTime":"2016-12-15","phone": "(023)49225588","address":"xxxx下街子8号，近北山公园","oper":"1"},
+  {"id":"3","name":"7天连锁酒店（xxxx客运中心站店）","star":"无","remaining":"12","all":"30","buildTime":"2016-12-16","phone": "(023)49225678","address":"xxxx内环南路611号客运中心候车厅右侧4楼，近火车站广场","oper":"1"},
+  {"id":"4","name":"7天连锁酒店（xxxx渝西广场店）","star":"无","remaining":"42","all":"70","buildTime":"2016-12-18","phone": "14783424266","address":"xxxx渝西大道中段1391号（张家坡百货楼上），近xxxx九州医院、渝西广场斜对面","oper":"1"},
+  {"id":"5","name":"xxxx国际大饭店","star":"无","remaining":"17","all":"60","buildTime":"2016-12-17","phone": "(023)49222121","address":"xxxx人民西路589号，近中山中学","oper":"1"},
+  {"id":"6","name":"xxxx名豪国际酒店","star":"无","remaining":"13","all":"45","buildTime":"2016-12-18","phone": "14583435904","address":"xxxx萱花路108号，近文曲路","oper":"1"},
+  {"id":"7","name":"乐和乐都两江酒店","star":"无","remaining":"11","all":"50","buildTime":"2016-12-19","phone": "(023)49222222","address":"xxxx卫星湖街道风龙场，近成渝高速（杨家湾段）","oper":"1"},
+  {"id":"8","name":"xxxx斯特拉福精品酒店","star":"无","remaining":"22","all":"48","buildTime":"2016-12-20","phone": "(023)49224343","address":"xxxx华创大道588号来龙湖生态园，近乐和乐都主题公园度假群","oper":"1"},
+  {"id":"9","name":"xxxx中华茶艺山庄","star":"无","remaining":"9","all":"66","buildTime":"2016-12-20","phone": "(023)49225674","address":"xxxx昌州大道西段6号（茶山竹海风景区），近财经职业学院","oper":"1"},
+  {"id":"10","name":"xxxx川龙大酒店","star":"无","remaining":"12","all":"32","buildTime":"2017-01-08","phone": "(023)49224324","address":"xxxx迎宾大道363号，火车站广场旁","oper":"1"},
+  {"id":"11","name":"汉庭酒店（xxxx名豪美食街店）","star":"无","remaining":"6","all":"46","buildTime":"2017-01-09","phone": "(023)49223456","address":"xxxx胜利路78号","oper":"1"}
+]}

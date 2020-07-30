@@ -1,0 +1,72 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title></title>
+
+<link href="../../css/main.css" rel="stylesheet" type="text/css">
+
+</head>
+<body >
+<div class="tab_labe"><a  class="a_tab" href="#">基本设置</a> <a href="#">安全设置</a></div>
+<div class="div_box">
+<div class="set_div">
+    <h4 class="h5_style1">地址设置：</h4>
+ <p class="p_set"><label class="label_set">IP地址：</label><input type="text" class="ip_adtr">.<input type="text" class="ip_adtr">.<input type="text" class="ip_adtr">.<input type="text" class="ip_adtr"/><input type="button" value="设置" class="set_but"/></p>
+    <p class="p_set"><label class="label_set">物理地址：</label><input type="text" class="ip_adtr">.<input type="text" class="ip_adtr">.<input type="text" class="ip_adtr">.<input type="text" class="ip_adtr"/><input type="button" value="设置" class="set_but"/></p>
+    <p class="p_set"><label class="label_set">ORACEL地址：</label><input type="text" class="form_input"/><input type="button" value="设置" class="set_but"/></p>
+    <h4 class="h5_style1">功能设置：</h4>
+    <p class="p_set"><label class="label_set">开启模式：</label> <input type="radio" class="form_radio" ><a class="form_a">自动开启</a> <input type="radio" class="form_radio"><a  class="form_a"> 手动开启</a></p>
+    <p class="p_set"><label class="label_set">网络模式：</label> <input type="radio" class="form_radio" ><a class="form_a">在线</a> <input type="radio" class="form_radio"><a  class="form_a"> 离线</a></p>
+    <h4 class="h5_style1">权限设置：</h4>
+    <p class="p_set"><label class="label_set">本地权限：</label><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">权限一</a><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">权限二</a><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">权限三</a></p>
+    <p class="p_set"><label class="label_set">异地权限：</label><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">权限一</a><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">权限二</a><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">权限三</a></p>
+    <h4 class="h5_style1">字体设置：</h4>
+    <p class="p_set"><label class="label_set">字体类型：</label><select class="form_select">
+        <option>xxz</option>
+        <option>xxxx</option>
+    </select></p>
+    <p class="p_set"><label class="label_set">字体大小：</label><select class="form_select">
+        <option>xxz</option>
+        <option>xxxx</option>
+    </select></p>
+    <p class="p_set"><label class="label_set">字体颜色：</label><select class="form_select">
+        <option>xxz</option>
+        <option>xxxx</option>
+    </select></p>
+    <p class="but_p"><input type="submit" value="保存" class="but_save"/><input type="button" value="取消" class="but_close"> </p>
+</div>
+<div class="set_div" style="display: none">
+    <h4 class="h5_style1">网络设置：</h4>
+    <p class="p_set"><label class="label_set">网络级别：</label> <input type="radio" class="form_radio" ><a class="form_a">高</a><input type="radio" class="form_radio"><a  class="form_a"> 中</a> <input type="radio" class="form_radio"><a  class="form_a"> 低</a>
+    <h4 class="h5_style1">网络区域：</h4>
+    <p class="p_set"><label class="label_set">区域一：</label><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">区域二</a><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">区域三</a><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">权限三</a></p>
+    <p class="but_p"><input type="submit" value="保存" class="but_save"/><input type="button" value="取消" class="but_close"> </p>
+</div>
+</div>
+<script src="../../js/jquery.js"></script>
+
+
+
+<!--<script>-->
+    <!--$(function(){-->
+        <!--$(".tab_labe a").click(function(){-->
+            <!--$(this).addClass("a_tab").siblings().removeClass("a_tab");-->
+        <!--})-->
+    <!--})-->
+<!--</script>-->
+
+<script>
+    $(function(){
+        $(".tab_labe a").each(function (index) {
+            $(this).on("click",function () {
+                $(".div_box>div").eq(index).fadeIn().siblings("div").stop().hide();
+                $(this).addClass("a_tab").siblings().removeClass("a_tab");
+            });
+        });
+    })
+</script>
+
+</body>
+</html>

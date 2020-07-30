@@ -1,0 +1,9 @@
+
+{"data":
+[ {"id":"1","name":"小风饰品","type":"饰品","payment":"刷卡","tradingTime":"2017-01-15:12:12:05","much": "325","phone": "15583459065","note":"","oper":"1"},
+{"id":"2","name":"娜未儿","type":"饰品","payment":"现金","tradingTime":"2017-01-04:13:42:09","much": "126","phone": "15783459011","note":"","oper":"1"},
+{"id":"3","name":"萌熊玩具","type":"饰品","payment":"微信","tradingTime":"2016-12-23:17:34:44","much": "124","phone": "15583459065","note":"","oper":"1"},
+{"id":"4","name":"春天饰品店","type":"饰品","payment":"支付宝","tradingTime":"2016-12-14:55:12:54","much": "5100","phone": "15483467021","note":"","oper":"1"},
+{"id":"5","name":"情缘饰品","type":"饰品","payment":"刷卡","tradingTime":"2016-12-12:11:14:57","much": "410","phone": "1541371919","note":"","oper":"1"}
+  
+]}

@@ -1,0 +1,67 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <link href="../../css/main.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<div class="div_left">
+
+    <form id="form_demo" class="form_b" >
+        <p class="form_p"><label class="form_label">编号：</label><input type="text" class="form_input1 readonly" readonly="readonly"><i class="i_start"></i><a class="a_note">自动生成</a> </p>
+        <p class="form_p"><label class="form_label">标题：</label><input type="text" class="form_input1 " minlength="2"  required ><i class="i_start"></i> </p>
+
+        <p class="form_p"><label class="form_label">类型：</label><select class="form_select">
+            <option>xxz</option>
+            <option>xxxx</option>
+        </select></p>
+
+        <p class="form_p"><label class="form_label">描述：</label><textarea class="text_area1" ></textarea></p>
+
+    </form>
+
+
+    <div class="clear"></div>
+
+</div>
+
+<div class="div_right">
+    <form class="form_b">
+    <p class="p_padd"><img src="../../image/ph_list.png"/></p>
+    <p class="p_padd"><input type="button" class="but_upload" value="点击上传图片"/></p>
+    <p class="p_text">图片为必填写项</p>
+    <p class="p_text1">上传图片不能大于1M，图片格式为：jpg,png,tif,pneg,tiff格式。</p>
+    </form>
+</div>
+<div class="clear"></div>
+<form id="form_demo1"  class="form_b">    <p class="but_p"><input type="submit" value="保存" class="but_save"/><input type="button" value="取消" class="but_close" id="close"> </p></form>
+<script src="../../js/jquery.js"></script>
+
+<script src="../../layer_v2.1/layer/layer.js"></script>
+<script src="../../js/jquery-validation-1.14.0/dist/jquery.validate.min.js" charset="utf-8"></script>
+<script src="../../js/jquery-validation-1.14.0/dist/localization/messages_zh.js" charset="utf-8"></script>
+<script>
+    $(function(){
+        var index = parent.layer.getFrameIndex(window.name); //获取当前窗体索引
+        $('#close').on('click', function(){
+            parent.layer.close(index); //执行关闭
+        });
+
+    })
+</script>
+<script >
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("修改成功");
+        }
+    });
+    $().ready(function() {
+        $(".form_b").validate();
+    });
+</script>
+</body>
+</html>

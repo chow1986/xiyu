@@ -1,0 +1,11 @@
+
+{"data":
+[ {"id":"1","name":"xxxxx黄瓜山生态旅游合作社","type":"国内社","buildTime":"2012-04-15","start": "成都","end": "邛崃","phone": "15583459065","address":"205省道附近","oper":"1"},
+  {"id":"2","name":"中国青年旅行社(xxxxx店)","type":"国内社","buildTime":"2011-03-11","start": "昆明","end": "邛崃","phone": "023-49204920","address":"中国青年旅行社(xxxxx店)","oper":"1"},
+  {"id":"3","name":"顽家国际旅行社(xxxxx营业部)","type":"国内社","buildTime":"2014-07-10","start": "西安","end": "邛崃","phone": "023-49232921","address":"人民西路ac世纪城附近","oper":"1"},
+  {"id":"4","name":"宝中旅游(xxxxx亨通营业部)","type":"国内社","buildTime":"2010-01-11","start": "北京","end": "邛崃","phone": "(023)49865676","address":"xxxxx其他亨通步行街","oper":"1"},
+  {"id":"5","name":"xxxxx旅游营销中心","type":"国内社","buildTime":"2015-04-24","start": "南京","end": "邛崃","phone": "023-32204951","address":"人民大道221号附近","oper":"1"},
+  {"id":"6","name":"旅游百事通","type":"国内社","buildTime":"2013-03-19","start": "成都","end": "拉萨","phone": "(023)49899677","address":"红河大道726号","oper":"1"},
+  {"id":"7","name":"皇程旅游","type":"国内社","buildTime":"2010-10-11","start": "邛崃","end": "杭州","phone": "18580764360","address":"兴龙湖大道123号协信滨湖新天地10栋1-5号","oper":"1"},
+  {"id":"8","name":"渝之旅","type":"国内社","buildTime":"2014-04-11","start": "济南","end": "邛崃","phone": "023-39204455","address":"xxxxx其他内环南路永川阳光花园附近","oper":"1"}
+]}

@@ -1,0 +1,19 @@
+
+{"data":
+[ {"id":"1","name":"xxxxx永川豪家酒店","roomID":"5231","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-15:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"2","name":"xxxxx永川豪家酒店","roomID":"5232","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-15:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"3","name":"xxxxx永川豪家酒店","roomID":"5233","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-15:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"4","name":"xxxxx永川豪家酒店","roomID":"5234","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-16:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"5","name":"xxxxx永川豪家酒店","roomID":"5235","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-16:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"6","name":"xxxxx永川豪家酒店","roomID":"5236","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-17:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"7","name":"xxxxx永川豪家酒店","roomID":"5237","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-18:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"8","name":"xxxxx永川豪家酒店","roomID":"5238","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-18:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"9","name":"xxxxx永川豪家酒店","roomID":"5230","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-19:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"10","name":"xxxxx永川豪家酒店","roomID":"5239","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-19:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"11","name":"xxxxx永川豪家酒店","roomID":"5240","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-19:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"12","name":"xxxxx永川豪家酒店","roomID":"5241","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-19:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"13","name":"xxxxx永川豪家酒店","roomID":"5242","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-20:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"14","name":"xxxxx永川豪家酒店","roomID":"5243","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-20:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"15","name":"xxxxx永川豪家酒店","roomID":"5244","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-22:12:00:00","info":"采光好，通风好","oper":"1"},
+  {"id":"16","name":"xxxxx永川豪家酒店","roomID":"5245","type":"单间","price":"240","floor":"5楼","backTime": "2016-12-22:12:00:00","info":"采光好，通风好","oper":"1"}
+]}

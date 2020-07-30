@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>jquery图片左右连续滚动_前端开发-武方博</title>
+    <style type="text/css">
+
+        .wrap{border:1px dashed #ccc; background:#f8f8f8; padding:20px;}
+
+
+        #slide{overflow:hidden;width:1200px;margin:100px auto;}
+        ul{list-style:none;}
+        li{float:left;}
+        .slideul1{width:4800px;}
+    </style>
+    <script type="text/javascript"  src="../../jquery.js"></script>
+
+</head>
+<body>
+
+
+<div class="wrap">
+
+
+    <div id="slide">
+        <ul class="slideul1">
+            <li class="slideli1">
+                <ul class="slideul2">
+                    <li><img src="../../image/1.jpg"/></li>
+                    <li><img src="../../image/2.jpg"/></li>
+                    <li><img src="../../image/3.jpg"/></li>
+                    <li><img src="../../image/4.jpg"/></li>
+                    <li><img src="../../image/5.jpg"/></li>
+                </ul>
+            <li class="slideli2"></li>
+        </ul>
+
+
+
+
+    </div>
+</div>
+
+<script type="text/javascript">
+    var _speed=30;
+    var _slide = $("#slide");
+    var _slideli1 = $(".slideli1");
+    var _slideli2 = $(".slideli2");
+    _slideli2.html(_slideli1.html());
+    function Marquee(){
+        if(_slide.scrollLeft() >= _slideli1.width())
+            _slide.scrollLeft(0);
+        else{
+            _slide.scrollLeft(_slide.scrollLeft()+1);
+        }
+    }
+    $(function(){
+        //两秒后调用
+        var sliding=setInterval(Marquee,_speed)
+        _slide.hover(function() {
+            //鼠标移动DIV上停止
+            clearInterval(sliding);
+        },function(){
+            //离开继续调用
+            sliding=setInterval(Marquee,_speed);
+        });
+    });
+</script>
+
+</body>
+</html>

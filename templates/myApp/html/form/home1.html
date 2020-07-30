@@ -1,0 +1,89 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title></title>
+
+<link href="../../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../../css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body class="home_body">
+<div class="home_left1">
+    <h3 class="home_h3">流量图</h3>
+    <div class="div_char1" id="char_c"></div>
+
+    <div class="clear"></div>
+</div>
+<div class="home_riht1"> <h3 class="home_h3">消息</h3>
+    <ul class="ul_mes">
+        <li><i class="i_mes"></i> <a href="#">xxxxxxxxxxxxx</a> <span>06-12</span></li>
+        <li><i class="i_mes"></i> <a href="#">xxxxxxxxxxxxx</a> <span>06-12</span></li>
+        <li><i class="i_mes"></i> <a href="#">xxxxxxxxxxxxx</a> <span>06-12</span></li>
+        <li><i class="i_mes"></i> <a href="#">xxxxxxxxxxxxx</a> <span>06-12</span></li>
+        <li><i class="i_mes"></i> <a href="#">xxxxxxxxxxxxx</a> <span>06-12</span></li>
+        <li><span>更多</span> </li>
+    </ul>
+    <div class="clear"></div>
+
+</div>
+
+<div class="home_riht1">
+    <h3 class="home_h3">数据统计</h3>
+    <p><table>
+    <tr>
+        <td>日期</td>
+        <td>访问量</td>
+        <td>注册量</td>
+        <td>操作量</td>
+    </tr>
+    <tr>
+        <td>当天</td>
+        <td>访问量</td>
+        <td>注册量</td>
+        <td>操作量</td>
+    </tr>
+</table></p>
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/jquery.jqChart.min.js"></script>
+<script src="../../js/flot/jquery.flot.min.js"></script>
+<script>
+    $(function(){
+
+        var d1 = [
+            { label: "Bar1", data: [ [0,14], [1, 13], [2, 11], [3, 7] ] ,color: '#09F' },
+            { label: "Bar2", data: [ [0,8], [1, 22], [2, 33], [3, 11] ] , color: '#069'}
+        ];
+        $.plot($("#char_c"), d1, {
+            series: {
+                bars: {
+                    show: true
+                }
+            },
+            bars: {
+                align: "center",
+                barWidth: 0.5
+            },
+            xaxis: {
+                show: true,
+                //position: 'left',
+                //color: '#ccc',
+                //tickColor: '#fff',
+                ticks: [[0,'a'],[1,'b'],[2,'c'],[3,'d']],
+                tickSize: 2,
+                axisLabelUseCanvas: true,
+                axisLabelFontSizePixels: 12,
+                axisLabelFontFamily: 'Verdana, Arial',
+                axisLabelPadding: 10
+
+            },
+        });
+
+    });
+</script>
+
+
+
+</body>
+</html>

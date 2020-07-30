@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<script language="JavaScript"   src="/static/myApp/js/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){	
+	//导航切换
+	$(".menuson .header").click(function(){
+		var $parent = $(this).parent();
+		$(".menuson>li.active").not($parent).removeClass("active open").find('.sub-menus').hide();
+		
+		$parent.addClass("active");
+		if(!!$(this).next('.sub-menus').size()){
+			if($parent.hasClass("open")){
+				$parent.removeClass("open").find('.sub-menus').hide();
+			}else{
+				$parent.addClass("open").find('.sub-menus').show();	
+			}
+			
+			
+		}
+	});
+	
+	// 三级菜单点击
+	$('.sub-menus li').click(function(e) {
+        $(".sub-menus li.active").removeClass("active")
+		$(this).addClass("active");
+    });
+	
+	$('.title').click(function(){
+		var $ul = $(this).next('ul');
+		$('dd').find('.menuson').slideUp();
+		if($ul.is(':visible')){
+			$(this).next('.menuson').slideUp();
+		}else{
+			$(this).next('.menuson').slideDown();
+		}
+	});
+})	
+</script>
+
+
+
+<link href="/static/myApp/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="background:#f0f9fd; overflow:hidden">
+	
+    
+<dl class="leftmenu">
+    <!--旅游-->
+    <dd>
+        <div class="title">
+            <span><img  src="/static/myApp/image/Home.png" /></span><a href="main.html" target="right">首页</a>
+        </div>
+
+    </dd>
+    <dd>
+        <div class="title"><span><img src="/static/myApp/image/l22.png" /></span>报表管理<i class="down_i"></i>
+        </div>
+        <ul class="menuson">
+            <li><cite></cite><a href="monthreport.html" target="right">每月报表</a><i></i></li>
+            <li><cite></cite><a href="startgrade.html" target="right">开班情况</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/pages/hotel/tradingSearch.html" target="right">分班情况</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/pages/hotel/complaintsSearch.html" target="right">财务情况</a><i></i></li>
+        </ul>
+    </dd>
+    <dd>
+        <div class="title"><span><img src="/static/myApp/image/l16.png" /></span>财务管理<i class="down_i"></i>
+        </div>
+        <ul class="menuson">
+            <li><cite></cite><a href="/templates/myApp/html/pages/travelAgency/basic.html" target="right">基本情况</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/travelAgency/routes.html" target="right">线路情况</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/travelAgency/tradingSearch.html" target="right">交易情况</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/pages/travelAgency/complaintsSearch.html" target="right">投诉情况</a><i></i></li>
+        </ul>
+    </dd>
+    <dd>
+        <div class="title"><span><img src="/static/myApp/image/l28.png" /></span>系统管理<i class="down_i"></i>
+        </div>
+        <ul class="menuson">
+            <li><cite></cite><a href="/templates/myApp/html/pages/food/basic.html" target="right">基本信息</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/pages/food/complaintsSearch.html" target="right">投诉情况</a><i></i></li>
+        </ul>
+    </dd>
+    <dd>
+        <div class="title"><span><img src="/static/myApp/image/l26.png" /></span>其它管理<i class="down_i"></i>
+        </div>
+        <ul class="menuson">
+            <li><cite></cite><a href="/templates/myApp/html/pages/store/basic.html" target="right">基本信息</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/pages/store/goodsManage.html" target="right">商品管理</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/pages/store/tradingSearch.html" target="right">交易情况</a><i></i></li>
+            <li><cite></cite><a href="/templates/myApp/html/pages/store/complaintsSearch.html" target="right">投诉情况</a><i></i></li>
+        </ul>
+    </dd>
+    <dd>
+        <div class="title"><span><img src="/static/myApp/image/l07.png" /></span>人员管理<i class="down_i"></i>
+        </div>
+        <ul class="menuson">
+            <li><cite></cite><a href="/templates/myApp/html/pages/tickets/tradingSearch.html" target="right">交易情况</a><i></i></li>
+        </ul>
+    </dd>
+    
+
+
+
+
+    <!--<dd>
+        <div class="title">
+            <span><img  src="../image/leftico01.png" /></span><a href="../html/form/static_m.html" target="right">统计报表</a>
+        </div>
+
+    </dd>
+    <dd>
+        <div class="title">
+            <span><img  src="../image/leftico01.png" /></span><a href="../html/form/all_aly.html" target="right">统计分析</a>
+        </div>
+
+    </dd>-->
+    <!--<dd>-->
+    <!--<div class="title">-->
+    <!--<span><img  src="../image/leftico01.png" /></span><a href="../pages/statis_case/static_case.html" target="rightFrame">统计报表</a>-->
+    <!--</div>-->
+    <!---->
+    <!--</dd>-->
+</dl>
+    <div></div>
+</body>
+</html>

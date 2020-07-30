@@ -1,0 +1,9 @@
+
+{"data":
+[ {"id":"1","name":"xxxxxx豪家酒店","star":"无","payment":"刷卡","days":"2","roomID": "3-11","tradingTime":"2017-01-15:13:12:05","much": "450","phone": "15583459065","note":"","oper":"1"},
+  {"id":"2","name":"IU酒店（xxxxxx大南门店）","star":"无","payment":"刷卡","days":"3","roomID": "4-10","tradingTime":"2017-01-12:12:32:33","much": "360","phone": "(023)49225588","note":"","oper":"1"},
+  {"id":"3","name":"7天连锁酒店（xxxxxx客运中心站店）","star":"无","payment":"刷卡","days":"2","roomID": "3-22","tradingTime":"2017-01-03:14:34:45","much": "400","phone": "(023)49225678","note":"","oper":"1"},
+  {"id":"4","name":"7天连锁酒店（xxxxxx渝西广场店）","star":"无","payment":"现金","days":"1","roomID": "4-08","tradingTime":"2017-01-02:16:26:31","much": "150","phone": "14783424266","note":"","oper":"1"},
+  {"id":"5","name":"xxxxxx江鸿国际大饭店","star":"无","payment":"刷卡","days":"2","roomID": "3-18","tradingTime":"2016-12-12:22:33:24","much": "480","phone": "(023)49222121","note":"","oper":"1"},
+  {"id":"6","name":"xxxxxx名豪国际酒店","star":"无","payment":"刷卡","days":"1","roomID": "6-16","tradingTime":"2016-12-15:21:45:16","much": "240","phone": "14583435904","note":"","oper":"1"}
+]}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>学生信息</title>
+{% comment %}
+    <link rel="stylesheet" href="/static/myApp/css/mycss.css" type="text/css" >
+ {% endcomment %}
+     <link rel="stylesheet" href="{% static 'myApp/css/mycss.css'%}" type="text/css" >
+</head>
+<body>
+<h1>学生信息列表</h1>
+<ul>
+
+    {%for student in students%}
+    <li>
+        <a href="#">{{student.sname}}</a>
+    </li>
+    {%endfor%}
+</ul>
+<a>session</a><a>{{username}}</a>
+<a href="logintest">logintest</a>
+<h1>css测试</h1>
+</body>
+</html>

@@ -1,0 +1,45 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title></title>
+
+<link href="../../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../../css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="left_tree">
+    <h3 class="h3_left">树目录</h3>
+    <p> <ul id="tree" class="ztree"  ></ul></p>
+    <div class="clear"></div>
+</div>
+<div class="right_div"> <h3 class="h3_left">内容详情</h3>
+    <p class="form_p"><label class="form_label">名称：</label><input type="text" class="form_input"/></p>
+    <p class="form_p"><label class="form_label">类型：</label><select class="form_select">
+        <option>xxx</option>
+        <option>xxx</option>
+    </select></p>
+    <p class="form_p"><label class="form_label">区域：</label><input type="checkbox" class="form_check"><a class="form_a">高新</a>
+        <input type="checkbox" class="form_check"><a class="form_a">成华</a><input type="checkbox" class="form_check"><a class="form_a">锦江</a></p>
+    <p class="form_p"><label class="form_label">联系方式：</label><input type="text" class="form_input"/></p>
+    <p class="form_p"><label class="form_label a_posiotion">详情：</label><textarea class="text_arae"></textarea></p>
+    <p class="but_p"><input type="button" class="but_save" value="保存"/><input type="button" class="but_close" value="取消"> </p>
+
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/date/js/laydate.js"></script>
+<script src="../../js/jquery.ztree.core-3.5.js"></script>
+<script src="../../js/jquery.ztree.excheck-3.5.js"></script>
+<script src="../../js/ztree_d.js"></script>
+<script>
+    !function(){
+        laydate.skin('danlan');//切换皮肤，请查看skins下面皮肤库
+        laydate({elem: '#demo'});
+        laydate({elem: '#demo1'});//绑定元素
+    }();
+</script>
+
+
+</body>
+</html>

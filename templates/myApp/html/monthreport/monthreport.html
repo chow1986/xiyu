@@ -1,0 +1,115 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
+<title>报名情况</title>
+<link href="/static/myApp/css/main.css" rel="stylesheet" type="text/css">
+<link href="/static/myApp/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/static/myApp/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+<script src="/static/myApp/js/jquery.js"></script>
+<script src="/static/myApp/js/date/js/laydate.js"></script>
+<script src="/static/myApp/bstable/js/bootstrap.min.js"></script>
+<script src="/static/myApp/bstable/js/bootstrap-table.js"></script>
+<script src="/static/myApp/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="/static/myApp/layer_v2.1/layer/layer.js"></script>
+<script type="text/javascript">
+  function modifydata(url) {
+        layer.open({
+            type: 2,
+            title: '<h4 align="center">修改数据</h4>',
+            shadeClose: true,
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            //maxmin: true,
+            closeBtn: 1,
+            area: ['80%', '85%'],
+            shadeClose: true,
+            closeBtn: 1,
+            content: url
+            //iframe的url
+        });
+    }
+
+ function adddata(url) {
+        alert("123")
+        layer.open({
+            type: 2,
+            title: '<h4 align="center">增加数据</h4>',
+            shadeClose: true,
+            shade: 0.5,
+            skin: 'layui-layer-rim',
+            //maxmin: true,
+            closeBtn: 1,
+            area: ['80%','90%'],
+            shadeClose: true,
+            closeBtn: 1,
+            content: url
+            //iframe的url
+        });
+    }
+function show_confirm(id){
+var r=confirm("确定删除数据？");
+if (r==true){
+	$.ajax({
+        type: "post",
+        url: "deletemonthreportdata",
+        dataType: "json",
+        data:{
+            "id":id
+            },
+        success: function(data) {
+        window.location.reload();
+        }
+    });
+   }
+}
+</script>
+</head>
+<body>
+<div class="tabe_div">
+    <form action="monthreport.html" method="post"><p class="p_line text_ient"><a class="find_a">
+        培训时间：</a><input type="date"  class="form_input text_ient" value="{{ trainstarttime1 }}" name="trainstarttime1"/>
+        至<input type="date"  class="form_input text_ient" value="{{ trainstarttime2 }}" name="trainstarttime2"/>
+        <a class="find_a">培训类型：</a><input type="text" class="form_input text_ient" value="{{ traintype }}" name="traintype"/>
+    <a class="find_a">培训性质：</a>
+    <select class="form_select" style="padding-left: 1%;" name="trainproperty" value="{{ trainproperty }}">
+        <option value="全部">全部</option>
+        <option value="初训">初训</option>
+        <option value="复训">复训</option>
+    </select>
+    <input type="submit" value="查询" class="but_find"/>
+        <input type="hidden" value="{{mr.id}}" id="id_mreprot">
+    </form>
+    <p class="p_table"><a href="#" class="a_add" id="add_box" onclick="modifydata('addmonthreport.html')">单个添加</a>
+        <a href="#" class="a_add">批量导入</a></p>
+
+    <table id="table" class="table_style" style="margin: 0 auto" >
+         <tr>
+    <td style="font-weight:bold">培训时间</td>
+      <td style="font-weight:bold">培训性质</td>
+      <td style="font-weight:bold">项目及工种</td>
+      <td style="font-weight:bold">培训地点</td>
+       <td style="font-weight:bold">培训人数</td>
+       <td style="font-weight:bold">理论考试时间</td>
+       <td style="font-weight:bold">实操考试时间</td>
+       <td style="font-weight:bold">单位</td>
+       <td style="font-weight:bold">编辑</td>
+  </tr>
+ {% for mr in monthreport %}
+  <tr>
+    <td>{{mr.trainstarttime}}-{{mr.trainendtime}}</td>
+    <td>{{mr.trainproperty}}</td>
+    <td>{{mr.traintype}}-{{mr.worktype}}</td>
+      <td>{{mr.trainplace}}</td>
+    <td>{{mr.trainnumber}}</td>
+      <td>{{mr.theorytime}}</td>
+    <td>{{mr.practisetime}}</td>
+      <td>{{mr.company}}</td>
+      <td><a href="#" class="a_add" id="modify_box1" onclick="modifydata('modifymonthreport.html?id={{mr.id}}')">修改</a>
+      <a href="#" class="a_add" id="delete_box" onclick="show_confirm({{mr.id}})">删除</a>
+      <a href="#" class="a_add" id="modify_box2" onclick="modifydata('dividestartgrade.html?id={{mr.id}}')">○分班○</a></td>
+   </tr>
+        {% endfor %}
+    </table>
+</div>
+</body>
+</html>

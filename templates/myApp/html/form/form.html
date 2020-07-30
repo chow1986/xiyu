@@ -1,0 +1,170 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    
+ 
+
+<link href="../../css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="div_form">
+    <h1 class="h1_style"><i class="i_h1"></i> 内容填写</h1>
+    <form id="form_demo" >
+        <p class="form_p"><label class="form_label">编号：</label><input type="text" class="form_input readonly" readonly="readonly"><i class="i_start"></i><a class="a_note">自动生成</a> </p>
+        <p class="form_p"><label class="form_label">标题：</label><input type="text" class="form_input "name ="name" minlength="2"  required ><i class="i_start"></i> </p>
+        <p class="form_p"><label class="form_label">电子邮件：</label><input type="email" class="form_input " name="email" > </p>
+        <p class="form_p"><label class="form_label">电话号码：</label><input type="number" class="form_input " name="digits" ><a class="a_note">必须为数字</a></p>
+        <p class="form_p"><label class="form_label">密码：</label><input type="password" class="form_input " name="pass" minlength="6" required><i class="i_start"></i><a class="a_note">最小６位</a> </p>
+        <p class="form_p"><label class="form_label">职业：</label><select class="form_select">
+            <option>xxz</option>
+            <option>xxxx</option>
+        </select></p>
+        <p class="form_p"><label class="form_label">性别：</label><input type="radio" class="form_radio" checked="checked"><a class="form_a">男</a> <input type="radio" class="form_radio"><a  class="form_a"> 女</a></p>
+        <p class="form_p"><label class="form_label">区域：</label><input type="checkbox" class="form_check" checked="checked"/><a class="form_a">区域一</a><input type="checkbox" class="form_check"/><a class="form_a">区域二</a><input type="checkbox" class="form_check"/><a class="form_a">区域三</a></p>
+        <p class="form_p"><label class="form_label">日期：</label><input  class="form_date" id="demo"/></p>
+        <p class="form_p"><label class="form_label">内容：</label><textarea id="editor"  class="form_area"></textarea></p>
+        <p class="but_p"><input type="submit" value="保存" class="but_save"/><input type="button" value="取消" class="but_close"> </p>
+    </form>
+
+
+</div>
+<script src="../../js/jquery.js"></script>
+<script src="../../js/date/js/laydate.js"></script>
+<script src="../../js/utf8-php/ueditor.config.js"></script>
+<script src=" ../../js/utf8-php/ueditor.all.min.js"></script>
+<script src="../../js/jquery-validation-1.14.0/dist/jquery.validate.min.js" charset="utf-8"></script>
+<script src="../../js/jquery-validation-1.14.0/dist/localization/messages_zh.js" charset="utf-8"></script>
+
+<script>
+    !function(){
+        laydate.skin('danlan');//
+        laydate({elem: '#demo'});
+        laydate({elem: '#demo1'});//
+    }();
+</script>
+<script >
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("修改成功");
+        }
+    });
+    $().ready(function() {
+        $("#form_demo").validate();
+    });
+</script>
+<script >
+
+
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('????html????', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("");
+        UE.getEditor('editor').setContent('??????ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("");
+        arr.push("");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("")
+    }
+</script>
+</body>
+</html>

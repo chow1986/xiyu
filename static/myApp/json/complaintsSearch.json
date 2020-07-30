@@ -1,0 +1,9 @@
+
+{"data":
+[ {"id":"1","name":"xxxxxx豪家酒店","star":"无","way":"电话","type":"卫生","complaintsTime":"2017-01-13:12:12:05","phone": "15583459065","note":"房间被子未及时更换","oper":"1"},
+  {"id":"2","name":"IU酒店（xxxxxx大南门店）","star":"无","way":"电话","type":"卫生","complaintsTime":"2017-01-10:14:09:59","phone": "(023)49225588","note":"枕头下面有头发","oper":"1"},
+  {"id":"3","name":"7天连锁酒店（xxxxxx客运中心站店）","star":"无","way":"电话","type":"服务","complaintsTime":"2017-01-05:11:39:43","phone": "(023)49225678","note":"服务员服务态度不好，辱骂客人","oper":"1"},
+  {"id":"4","name":"7天连锁酒店（xxxxxx渝西广场店）","star":"无","way":"微信","type":"卫生","complaintsTime":"2016-12-18:18:44:11","phone": "14783424266","note":"卫生间未收拾干净","oper":"1"},
+  {"id":"5","name":"xxxxxx国际大饭店","star":"无","way":"微博","type":"服务","complaintsTime":"2016-12-12:22:15:09","phone": "(023)49222121","note":"前台态度恶劣","oper":"1"},
+  {"id":"6","name":"xxxxxx名豪国际酒店","star":"无","way":"电话","type":"价格","complaintsTime":"2016-12-09:09:23:38","phone": "14583435904","note":"价格不符，和网络上发布有很大的出入","oper":"1"}
+]}
