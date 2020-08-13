@@ -35,10 +35,12 @@ class Monthreport(models.Model):
     trainendtime=models.DateField()
     #培训性质(初训、复训)
     trainproperty=models.CharField(max_length=10)
-    #培训项目
+    #培训类型
     traintype=models.CharField(max_length=20)
     #培训工种
     worktype=models.CharField(max_length=20)
+    #操作项目
+    operatetype=models.CharField(max_length=20)
     #培训地点
     trainplace=models.CharField(max_length=20)
     #培训人数
