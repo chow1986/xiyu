@@ -24,25 +24,25 @@ class Students(models.Model):
 #浙江省安全生产管理与特种作业人员培训考核计划月报表
 class Monthreport(models.Model):
     #单位
-    company=models.CharField(max_length=30)
+    company=models.CharField(max_length=30,null=True)
     #联系人姓名
-    contactname=models.CharField(max_length=20)
+    contactname=models.CharField(max_length=20,null=True)
     #联系电话
-    contactphone=models.CharField(max_length=20)
+    contactphone=models.CharField(max_length=20,null=True)
     #培训开始时间
     trainstarttime=models.DateField()
     #培训结束时间
     trainendtime=models.DateField()
     #培训性质(初训、复训)
-    trainproperty=models.CharField(max_length=10)
+    trainproperty=models.CharField(max_length=10,null=True)
     #培训类型
-    traintype=models.CharField(max_length=20)
+    traintype=models.CharField(max_length=20,null=True)
     #培训工种
-    worktype=models.CharField(max_length=20)
+    worktype=models.CharField(max_length=20,null=True)
     #操作项目
-    operatetype=models.CharField(max_length=20)
+    operatetype=models.CharField(max_length=20,null=True)
     #培训地点
-    trainplace=models.CharField(max_length=20)
+    trainplace=models.CharField(max_length=20,null=True)
     #培训人数
     trainnumber=models.IntegerField()
     #理论时间
@@ -50,19 +50,19 @@ class Monthreport(models.Model):
     #实践时间
     practisetime=models.DateField()
     #备注
-    remark1=models.CharField(max_length=30)
-    remark2=models.CharField(max_length=30)
+    remark1=models.CharField(max_length=30,null=True)
+    remark2=models.CharField(max_length=30,null=True)
 
 #开班一览表
 class Grade(models.Model):
     #开班编号
-    gradenum=models.CharField(max_length=10)
+    gradenum=models.CharField(max_length=10,null=True)
     #开班项目
-    traintype=models.CharField(max_length=20)
+    traintype=models.CharField(max_length=20,null=True)
     #开班工种
-    worktype=models.CharField(max_length=20)
+    worktype=models.CharField(max_length=20,null=True)
     #培训性质
-    trainproperty=models.CharField(max_length=20)
+    trainproperty=models.CharField(max_length=20,null=True)
     #培训人数
     gradenumber=models.IntegerField()
     #开班时间
@@ -70,10 +70,10 @@ class Grade(models.Model):
     #实操时间
     traintime=models.DateField()
     #授课教师
-    teachername=models.CharField(max_length=20)
+    teachername=models.CharField(max_length=20,null=True)
     #考试时间
     examtime=models.DateField()
     #开班地点
-    trainplace=models.CharField(max_length=20)
+    trainplace=models.CharField(max_length=20,null=True)
     #备注
-    remark=models.CharField(max_length=20)
+    remark=models.CharField(max_length=20,null=True)

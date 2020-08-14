@@ -126,6 +126,7 @@ def addmonthreportdata(request):
     trainendtime = request.POST.get('trainendtime')
     traintype = request.POST.get('traintype')
     worktype = request.POST.get('worktype')
+    operatetype = request.POST.get('operatetype')
     theorytime = request.POST.get('theorytime')
     practisetime = request.POST.get('practisetime')
     trainplace = request.POST.get('trainplace')
@@ -141,6 +142,7 @@ def addmonthreportdata(request):
     mreport.trainnumber = trainnumber
     mreport.trainplace = trainplace
     mreport.worktype = worktype
+    mreport.operatetype=operatetype
     mreport.theorytime = theorytime
     mreport.practisetime = practisetime
     mreport.save()

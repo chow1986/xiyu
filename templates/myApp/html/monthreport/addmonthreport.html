@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 <title>报名情况</title>
 <link href="/static/myApp/css/main.css" rel="stylesheet" type="text/css">
-    <link href="/static/myApp/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="/static/myApp/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
+<link href="/static/myApp/bstable/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="/static/myApp/bstable/css/bootstrap-table.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <style>
@@ -15,13 +15,12 @@
     border-bottom: 0px solid #CCCCCC;
 }
 </style>
-
     <form action="addmonthreportdata" method="post"><p class="p_line text_ient">
         <p><a class="find_a">○培训单位：</a><input type="text" value='{{ company }}' class="form_input text_ient" placeholder="输入内容" name="company"/>
         <p><a class="find_a">○联系人：</a><input type="text" value='{{ contactname }}' class="form_input text_ient" placeholder="输入内容" name="contactname"/>
         <p><a class="find_a">○培训开始时间：</a><input type="date" value='{{ trainstarttime }}' class="form_input text_ient" placeholder="输入内容" name="trainstarttime"/>
-        <a class="find_a">培训结束时间：</a><input type="date" value='{{ trainendtime }}' class="form_input text_ient" placeholder="输入内容" name="trainendtime"/></p>
-        <p><a class="find_a">○培训类型：</a><select class="form_select" style="padding-left: 1%;" name="trainproperty" value="trainproperty" >
+        <a class="find_a">结束时间：</a><input type="date" value='{{ trainendtime }}' class="form_input text_ient" placeholder="输入内容" name="trainendtime"/></p>
+        <p><a class="find_a">○培训类型：</a><select class="form_select" style="padding-left: 1%;" id="traintype" onchange="setty()" name="traintype" >
         <option value="">请选择</option>
         <option value="主要负责人">主要负责人</option>
         <option value="安全生成管理人员">安全生成管理人员</option>
@@ -33,8 +32,12 @@
         <option value="初训">初训</option>
         <option value="复训">复训</option>
         </select></p>
-        <p><a class="find_a">○培训工种：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="worktype" value="{{worktype}}" /></p>
-        <p><a class="find_a">○操作项目：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="worktype" value="{{worktype}}" /></p>
+        <p><a class="find_a">○培训工种：</a><select class="form_select" style="padding-left: 1%;" id="worktype" name="worktype" onchange="setot()" >
+        <option value="">请选择</option>
+        </select></p>
+        <p><a class="find_a">○操作项目：</a><select class="form_select" style="padding-left: 1%;" id="operatetype" name="operatetype" >
+        <option value="">请选择</option>
+        </select></p>
         <p><a class="find_a">○培训地点：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="trainplace" value="{{ trainplace }}" /></p>
         <p><a class="find_a">○培训人数：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="trainnumber" value="{{ trainnumber }}" /></p>
         <p><a class="find_a">○理论考试时间：</a><input type="date" value='{{ theorytime }}' class="form_input text_ient" placeholder="输入内容" name="theorytime"/></p>
@@ -47,5 +50,88 @@
 <script src="/static/myApp/bstable/js/bootstrap.min.js"></script>
 <script src="/static/myApp/bstable/js/bootstrap-table.js"></script>
 <script src="/static/myApp/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script>
+var ot=document.getElementById("operatetype");
+function setty(){
+    var ty=document.getElementById("traintype").value;
+    var wt=document.getElementById("worktype");
+    if (ty=="主要负责人"||ty=="安全生成管理人员"){
+        wt.options.length=0;
+        wt.add(new Option("请选择",""));
+        wt.add(new Option("危险化学品","危险化学品"));
+        wt.add(new Option("烟花爆竹","烟花爆竹"));
+        ot.disabled=true;
+
+    }
+    else if(ty=="特种作业人员"){
+       ot.disabled=false;
+        wt.options.length=0;
+         wt.add(new Option("请选择",""));
+          wt.add(new Option("电工作业","电工作业"));
+           wt.add(new Option("焊接与热切割作业","焊接与热切割作业"));
+            wt.add(new Option("制冷与空调作业","制冷与空调作业"));
+             wt.add(new Option("高处作业","高处作业"));
+               wt.add(new Option("危险化学品安全作业","危险化学品安全作业"));
+    }
+}
+
+
+function setot(){
+    var wt=document.getElementById("worktype").value;
+    var ot=document.getElementById("operatetype");
+    if(wt=="电工作业"){
+         ot.options.length=0;
+         ot.add(new Option("请选择",""));
+         ot.add(new Option("防爆电气作业","防爆电气作业"));
+         ot.add(new Option("低压电气作业","低压电气作业"));
+         ot.add(new Option("高压电气作业","高压电气作业"));
+    }
+    else if(wt=="焊接与热切割作业"){
+            ot.options.length=0;
+            ot.add(new Option("请选择",""));
+            ot.add(new Option("熔化焊接与热切割作业","熔化焊接与热切割作业"));
+            }
+    else if(wt=="制冷与空调作业"){
+            ot.options.length=0;
+            ot.add(new Option("请选择",""));
+            ot.add(new Option("制冷与空调设备安装修理作业","制冷与空调设备安装修理作业"));
+            ot.add(new Option("制冷与空调设备运行操作作业","制冷与空调设备运行操作作业"));
+            }
+   else if(wt=="高处作业"){
+            ot.options.length=0;
+            ot.add(new Option("请选择",""));
+            ot.add(new Option("高处安装、维护、拆除作业","高处安装、维护、拆除作业"));
+            ot.add(new Option("等高架设作业","等高架设作业"));
+
+            }
+ else if(wt=="危险化学品安全作业"){
+            ot.options.length=0;
+            ot.add(new Option("请选择",""));
+            ot.add(new Option("化工自动化控制仪表作业","化工自动化控制仪表作业"));
+            ot.add(new Option("烷基化工艺作业","烷基化工艺作业"));
+            ot.add(new Option("聚合工艺作业","聚合工艺作业"));
+            ot.add(new Option("磺化工艺作业","磺化工艺作业"));
+            ot.add(new Option("胺基化工艺作业","胺基化工艺作业"));
+            ot.add(new Option("过氧化工艺作业","过氧化工艺作业"));
+            ot.add(new Option("氧化工艺作业","氧化工艺作业"));
+            ot.add(new Option("重氮化工艺作业","重氮化工艺作业"));
+            ot.add(new Option("加氢工艺作业","加氢工艺作业"));
+            ot.add(new Option("氟化工艺作业","氟化工艺作业"));
+            ot.add(new Option("裂解（裂化）工艺作业","裂解（裂化）工艺作业"));
+            ot.add(new Option("合成氨工艺作业","合成氨工艺作业"));
+            ot.add(new Option("硝化工艺作业","硝化工艺作业"));
+            ot.add(new Option("氯化工艺作业","氯化工艺作业"));
+            ot.add(new Option("氯碱电解工艺作业","氯碱电解工艺作业"));
+            ot.add(new Option("光气及光气化工艺作业","光气及光气化工艺作业"));
+            }
+
+
+
+
+
+
+}
+
+</script>
 </body>
 </html>
