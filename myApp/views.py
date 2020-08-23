@@ -86,8 +86,8 @@ def modifymonthreport(request):
     trainendtime = changetimetofront(mreport.trainendtime)
     theorytime=changetimetofront(mreport.theorytime)
     practisetime=changetimetofront(mreport.practisetime)
-    return render(request,"myApp/html/monthreport/modifymonthreport.html",{'trainstarttime':trainstarttime,'trainendtime':trainendtime,
-                                                               'traintype':mreport.traintype,'worktype':mreport.worktype,
+    return render(request,"myApp/html/monthreport/modifymonthreport.html",{'contactname':mreport.contactname,'company':mreport.company,'trainstarttime':trainstarttime,'trainendtime':trainendtime,
+                                                               'traintype':mreport.traintype,'worktype':mreport.worktype,'operatetype':mreport.operatetype,
                                                                'trainproperty':mreport.trainproperty,'trainplace':mreport.trainplace,
                                                                'theorytime':theorytime,'practisetime':practisetime,
                                                                'trainnumber':mreport.trainnumber,'id':mreport.id})
@@ -101,6 +101,8 @@ def modifymonthreportdata(request):
     trainplace = request.POST.get('trainplace')
     trainnumber = request.POST.get('trainnumber')
     trainproperty = request.POST.get('trainproperty')
+    operatetype=request.POST.get('operatetype')
+    company=request.POST.get('company')
     id=request.POST.get('id')
     mreport=Monthreport.objects.get(id=id)
     mreport.trainstarttime=trainstarttime
@@ -110,8 +112,10 @@ def modifymonthreportdata(request):
     mreport.trainnumber=trainnumber
     mreport.trainplace=trainplace
     mreport.worktype=worktype
+    mreport.company=company
     mreport.theorytime=theorytime
     mreport.practisetime=practisetime
+    mreport.operatetype=operatetype
     mreport.save()
     return render(request,'myApp/html/monthreport/success.html')
 

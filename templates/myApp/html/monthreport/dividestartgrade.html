@@ -16,20 +16,8 @@
 </style>
     <p><a class="find_a" style="color:red">○请输入分班个数：</a><input type="text" class="form_input text_ient" placeholder="请输入分班个数" id="dgrade"/></p>
     <form action="addstartgradedata" method="post"><p class="p_line text_ient" id="form">
-       <p> <a class="find_a">○项目类型：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="traintype"/>
-           <a class="find_a">○项目工种：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="worktype"/></p>
-   <p> <a class="find_a">○培训性质：</a>
-    <select class="form_select" style="padding-left: 1%;" name="trainproperty" >
-        <option value="初训">初训</option>
-        <option value="复训">复训</option>
-    </select></p>
-        <p><a class="find_a">○培训人数：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="gradenumber"/></p>
-        <p><a class="find_a">○培训开班时间：</a><input type="date"  class="form_input text_ient" placeholder="输入内容" name="gradestarttime"/></p>
-        <p><a class="find_a">○实践培训时间：</a><input type="date"  class="form_input text_ient" placeholder="输入内容" name="traintime"/></p>
-        <p><a class="find_a">○授课老师：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="teachername"/></p>
-         <p><a class="find_a">○考试时间：</a><input type="date" class="form_input text_ient" placeholder="输入内容" name="examtime"/></p>
-        <p><a class="find_a">○开班地点：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="trainplace"/></p>
-    <p align="center"><input type="submit" value="○提交数据○" class="but_find" id="datasubmit"/></p>
+       <p> <a class="find_a">○项目类型：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="traintype"/></p>
+        <p align="center"><input type="submit" value="○提交数据○" class="but_find" id="datasubmit"/></p>
     </form>
 <script src="/static/myApp/js/jquery.js"></script>
 <script src="/static/myApp/js/date/js/laydate.js"></script>
@@ -39,17 +27,34 @@
 <script type="text/javascript">
 $(document).ready(function(){
   $("#datasubmit").click(function(){
+        
+    	$.ajax({
+        type: "post",
+        url: "dividestartgradedata",
+        dataType: "json",
+        data:{
+            "id":id
+            },
+        success: function(data) {
+        window.location.reload();
+        }
+    });
+
   });
+
 });
 
 
 $(document).ready(function(){
   $("#dgrade").blur(function(){
   $(".gradenum").remove()
-  var gradenum ='<p class="gradenum"><a class="find_a">○开班编号：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="gradenum"/><a class="find_a">班级人数：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" name="gradenum"/></p>'
+  $(".gradetime").remove()
+  $(".hrr").remove()
+  var gradenum ='<p class="gradenum"><a class="find_a">○开班编号：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" id="gradenum"/><a class="find_a">○班级人数：</a><input type="text"  class="form_input text_ient" placeholder="输入内容" id="gradenum"/></p>'
+  var gradetime='<p class="gradetime"><a class="find_a">○开班时间：</a><input type="date"  class="form_input text_ient" placeholder="输入内容" id="gradestarttime"/><a class="find_a">○实操时间：</a><input type="date"  class="form_input text_ient" placeholder="输入内容" id="traintime"/></p><hr class="hrr"/>'
   var gradenumber= $("#dgrade").val()
   for (var index = 0; index < gradenumber; index++) {
-    $("#form").append(gradenum);
+    $("#form").append(gradenum+gradetime);
 }
   });
 });

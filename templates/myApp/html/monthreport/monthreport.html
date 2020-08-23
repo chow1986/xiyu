@@ -93,20 +93,20 @@ if (r==true){
        <td style="font-weight:bold">培训人数</td>
        <td style="font-weight:bold">理论考试时间</td>
        <td style="font-weight:bold">实操考试时间</td>
-       <td style="font-weight:bold">单位</td>
+       <td style="font-weight:bold">组织单位</td>
        <td style="font-weight:bold">编辑</td>
   </tr>
  {% for mr in monthreport %}
   <tr>
-    <td>{{mr.trainstarttime}}-{{mr.trainendtime}}</td>
-    <td>{{mr.trainproperty}}</td>
-    <td>{{mr.traintype}}</td>
+      <td>{{mr.trainstarttime}}-{{mr.trainendtime}}</td>
+      <td>{{mr.trainproperty}}</td>
+      <td>{{mr.traintype}}</td>
       <td>{{mr.worktype}}</td>
       <td>{{mr.operatetype}}</td>
       <td>{{mr.trainplace}}</td>
-    <td>{{mr.trainnumber}}</td>
+      <td>{{mr.trainnumber}}</td>
       <td>{{mr.theorytime}}</td>
-    <td>{{mr.practisetime}}</td>
+      <td>{{mr.practisetime}}</td>
       <td>{{mr.company}}</td>
       <td><a href="#" class="a_add" id="modify_box1" onclick="modifydata('modifymonthreport.html?id={{mr.id}}')">修改</a>
       <a href="#" class="a_add" id="delete_box" onclick="show_confirm({{mr.id}})">删除</a>

@@ -17,7 +17,7 @@
 </style>
     <form action="addmonthreportdata" method="post"><p class="p_line text_ient">
         <p><a class="find_a">○培训单位：</a><input type="text" value='{{ company }}' class="form_input text_ient" placeholder="输入内容" name="company"/>
-        <p><a class="find_a">○联系人：</a><input type="text" value='{{ contactname }}' class="form_input text_ient" placeholder="输入内容" name="contactname"/>
+        <a class="find_a">○联系人：</a><input type="text" value='{{ contactname }}' class="form_input text_ient" placeholder="输入内容" name="contactname"/></p>
         <p><a class="find_a">○培训开始时间：</a><input type="date" value='{{ trainstarttime }}' class="form_input text_ient" placeholder="输入内容" name="trainstarttime"/>
         <a class="find_a">结束时间：</a><input type="date" value='{{ trainendtime }}' class="form_input text_ient" placeholder="输入内容" name="trainendtime"/></p>
         <p><a class="find_a">○培训类型：</a><select class="form_select" style="padding-left: 1%;" id="traintype" onchange="setty()" name="traintype" >
@@ -34,8 +34,8 @@
         </select></p>
         <p><a class="find_a">○培训工种：</a><select class="form_select" style="padding-left: 1%;" id="worktype" name="worktype" onchange="setot()" >
         <option value="">请选择</option>
-        </select></p>
-        <p><a class="find_a">○操作项目：</a><select class="form_select" style="padding-left: 1%;" id="operatetype" name="operatetype" >
+        </select>
+        <a class="find_a">○操作项目：</a><select class="form_select" style="padding-left: 1%;" id="operatetype" name="operatetype" >
         <option value="">请选择</option>
         </select></p>
         <p><a class="find_a">○培训地点：</a><input type="text" class="form_input text_ient" placeholder="输入内容" name="trainplace" value="{{ trainplace }}" /></p>
